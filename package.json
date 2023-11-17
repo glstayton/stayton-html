@@ -1,0 +1,14 @@
+{
+  "name": "stayton-html",
+  "version": "1.0.0",
+  "description": "a fun little website for me",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gentry Stayton",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

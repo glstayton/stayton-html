@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Pong</title>
+    	<link rel="stylesheet" href="/css/pumpkin.css">
+<title>Pong Game</title>
+<meta name="keywords" content="Pong, Game" />
+<meta name="description" content ="Pong Game is a site dedicated to the good old pong game, you can find a few versions of the game along with basic information and history" />
+<link rel="stylesheet" type="text/css" href="game.css" />
+<link rel="canonical" href="https://www.ponggame.org/" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<script type="text/javascript" charset="UTF-8" src="//ca-eu.cookie-script.com/s/09975fc1a3efdc4797a92c9fc72c53ce.js"></script>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="/home/actual.html" class="active">Home</a>
+        <a href="/home/links.html">Links</a>
+        <a href="/home/contact.html">Contact</a>
+        <a href="/home/directory.html">Directory</a>
+		<a href="/home/projects.html">Projects</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+            </a>
+    </div>
+    <div id="gameArea">
+	<div id="gameModeScreen" class="gameScreenDiv" style="display:none;">
+		<button onclick="SetIsOnePlayerMode(true);"><span class="buttonKey">(1)&nbsp;</span>One Player</button>
+		<button onclick="SetIsOnePlayerMode(false);"><span class="buttonKey">(2)&nbsp;</span>Two Players</button>
+		<div id="soundButtonWrapper">
+			<button id="soundButton" class="soundOff" onclick="SwitchSound();" aria-label="Toggle Sound"></button>
+			<label for="soundButton" class="soundButtonLabel" >SOUND</label>
+		</div>
+		<div id="optionsButton" class="optionsButton" onclick="OpenOptions();">Options</div>
+		<div id="winsDiv">SINGLE PLAYER LIFETIME WINS: <span id="winsStats"></span> <span id="resetStatsButton" style="cursor:pointer;" onclick="ResetLifetime();">(reset)</span></div>
+	</div>
+	<div id="gameOptionsScreen" class="optionsPanel" style="display:none;text-align:center">
+		<div class="singleOption">
+			Score to Win<br/>
+			<button id="score3" onclick="SetScoreToWin(3);">3</button>
+			<button id="score5" onclick="SetScoreToWin(5);">5</button>
+			<button id="score10" onclick="SetScoreToWin(10);">10</button>
+			<button id="score15" onclick="SetScoreToWin(15);">15</button>
+			<button id="score20" onclick="SetScoreToWin(20);">20</button>
+		</div>
+		<div class="singleOption">
+			Ball Slower During Serve<br/>
+			<button id="serve0" onclick="SetServeSlow(false);">No</button>
+			<button id="serve1" onclick="SetServeSlow(true);">Yes</button>
+		</div>
+		<div class="singleOption">
+			Keyboard Sensitivity <br/>
+			<button id="sense0" onclick="SetKeyboardSensitivity(-3);">Low</button>
+			<button id="sense1" onclick="SetKeyboardSensitivity(0);">Normal</button>
+			<button id="sense2" onclick="SetKeyboardSensitivity(3);">High</button>
+		</div>
+		<div class="singleOption">
+			Who Starts After a Point<br/>
+			<button id="starts1" onclick="SetStarts(1);" style="width:180px">The Player that scored</button>
+			<button id="starts0" onclick="SetStarts(0);" style="width:160px;">Alternate</button>
+			<button id="starts2" onclick="SetStarts(2);" style="width:180px;">The other Player</button>
+		</div>
+		<div class="singleOption" style="margin-top:20px;">
+			<button onclick="ResetOptions();">Reset</button>
+			<button onclick="ShowMainScreen();">Back</button>
+		</div>
+	</div>
+
+	<div id="controlModeScreen" class="gameScreenDiv"  style="display:none;">
+		<button onclick="SetControlMode(0);"><span class="buttonKey">(k)&nbsp;</span>Keyboard</button>
+		<button onclick="SetControlMode(1);"><span class="buttonKey">(m)&nbsp;</span>Mouse</button>
+		<div id="onePlayerInstructionsDiv">
+			P - PAUSE<br/>
+			ESC - QUIT
+		</div>
+	</div>
+	<div id="difficultyScreen" class="gameScreenDiv" style="font-size:18px;display:none">
+		<button id="easyDifficultyButton" onclick="SetDifficulty(0);"><span class="buttonKey">(e)&nbsp;</span>Easy</button>
+		<button onclick="SetDifficulty(1);"><span class="buttonKey">(m)&nbsp;</span>Medium</button>
+		<button id="hardDifficultyButton" onclick="SetDifficulty(2);"><span class="buttonKey">(h)&nbsp;</span>Hard</button>
+		<div id="twoPlayersInstructionsDiv">
+			PLAYER 1 - ARROW KEYS<br/>
+			PLAYER 2 - S AND X<br/>
+			P - PAUSE<br/>
+			ESC - QUIT
+		</div>
+	</div>
+	<div id="gameScreen" class="gameScreenDiv"  style="display:none;">
+		<div class="scoreWrapper">
+			<div id="player1Score">0</div>
+			<div id="player2Score">0</div>
+		</div>
+		<div id="pauseDiv">Paused, press P to continue</div>
+		<canvas id="gameCanvas">
+		</canvas>
+	</div>
+	<div id="endGameScreen" style="display:none;">
+		<div id="winMessage">WIN</div>
+		<button onclick="StartGame();"><span class="buttonKey">(r)&nbsp;</span>Play Again</button>
+		<button onclick="ShowMainScreen();"><span class="buttonKey">(esc)&nbsp;</span>Main Menu</button>
+		<button onclick="GotoSolitaire();" style="margin-top:8px;">Play Solitaire!</button>
+	</div>
+</div>
+<script src="compiled-2.js"></script>
+<script> ShowMainScreen();</script>
+<br/><br/>
+</div>
+</div>
+</div>
+<br/>
+</div>
+<br/><br/><br/>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Contact</title>
+    	<link rel="stylesheet" href="/css/pumpkin.css">
+          </head>
+<body>
+	<div class="topnav" id="myTopnav">
+		<a href="actual.html" class="active">Home</a>
+		<a href="links.html">Links</a>
+		<a href="contact.html">Contact</a>
+		<a href="directory.html">Directory</a>
+    <a href="projects.html">Projects</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		  <i class="fa fa-bars"></i>
+		</a>
+    	</div>
+        <h1>Contact</h1>
+    <h2>Y-you really want to talk to... me??</h2>
+    <p>(Heads up this is a work in progress. Not currently functioning.)</p>
+    <P>If you're looking for direct contact, email me at <a href="mailto:stayton.webinquiry@pm.me">stayton.webinquiry@pm.me</a></P>
+        <form id="fcf-form-id" class="fcf-form-class" method="post" action="../error.html"
+        <label for="Name" class="fcf-label">Your name</label>
+    <div class="fcf-input-group">
+        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+        </div>
+    <div class="fcf-form-group">
+        <label for="Email" class="fcf-label">Your email address</label>
+        <div class="fcf-input-group">
+        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+        </div>
+    <div class="fcf-form-group">
+        <label for="Message" class="fcf-label">Your message</label>
+        <div class="fcf-input-group">
+        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+        </div>
+    </div>
+    <div class="fcf-form-group">
+        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
+    </div>
+</body>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+</html>

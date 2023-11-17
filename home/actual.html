@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Home</title>
+    	<link rel="stylesheet" href="/css/pumpkin.css">
+    </head>
+<body>
+	<div class="topnav" id="myTopnav">
+		<a href="actual.html" class="active">Home</a>
+		<a href="links.html">Links</a>
+		<a href="contact.html">Contact</a>
+		<a href="directory.html">Directory</a>
+		<a href="projects.html">Projects</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		  <i class="fa fa-bars"></i>
+		</a>
+	  </div>
+	<h1>Welcome</h1>
+	<h2>What's this all about?</h2>
+		<p>Well, you beat the minigame! This part is under construction :p<p>
+			<p style="font-size:50%;">(really i'm just adding silly little gifs of peppino all over the site)</p>
+			<p>Additionally, if you didn't already know, there's an easy way to skip the puzzle for next time. Check the source code on the frontpage (index.html) and look for a silly little hidden link.</p>
+		<button onclick="window.location.href='/conglaturations.html';">
+			Pat yourself on the back
+			</button>
+			<script>
+				function myFunction() {
+				  var x = document.getElementById("myTopnav");
+				  if (x.className === "topnav") {
+					x.className += " responsive";
+				  } else {
+					x.className = "topnav";
+				  }
+				}
+				</script>
+</body>
+
+</html>
