@@ -141,8 +141,8 @@ hr {
 
 img {
     display: block;
-    height: auto; 
     max-width: 100%; 
+    font-size: 0;
 }
 
 figure {
